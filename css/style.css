@@ -276,7 +276,6 @@ a:hover { text-decoration: underline; }
 .pub-title:hover { color: var(--accent); }
 .pub-authors { color: var(--muted); font-size: 14.2px; }
 .pub-meta { color: var(--faint); font-size: 14.2px; }
-.pub-cites { color: var(--accent); font-weight: 500; }
 .pub-links { font-size: 13.5px; }
 .pub-links a { font-weight: 600; }
 
