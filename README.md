@@ -49,9 +49,10 @@ GitHub 仓库页 → "uploading an existing file" → 把本目录所有文件�
 
 1. **GitHub 链接**：`index.html` 中搜索 `YOUR-USERNAME`，填入你的 GitHub 用户名并去掉外层 HTML 注释。
 2. **PE-ETT（TPEL 在投）**：论文公开后在 Publications 的 "Under Review" 注释块里填入正式标题并取消注释；录用后改为对应期刊 badge。
-3. **IPEC 2026 / ECCE 2024 / PCIM 2024 论文标题**：目前是描述性占位（标有 "exact title to be confirmed"），拿到精确题名后替换。
-4. **公司英文名**：三峡智控、陕汽的官方英文名如有出入请更正（Experience 一节）。
-5. 隐私说明：手机号**没有**放上主页（学术主页公开电话会招骚扰），如确实需要可自行加。
+3. **公司英文名**：三峡智控、陕汽的官方英文名如有出入请更正（Experience 一节）。
+4. 隐私说明：手机号**没有**放上主页（学术主页公开电话会招骚扰），如确实需要可自行加。
+
+> 论文条目的标题、作者、DOI 均已通过 Crossref + ORCID 双源核实（2026-09），含 ORCID 主页链接。
 
 ## 目录结构
 
