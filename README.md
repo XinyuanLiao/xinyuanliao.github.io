@@ -35,13 +35,19 @@ GitHub 仓库页 → "uploading an existing file" → 把本目录所有文件�
 
 > 若想用自定义域名（如 `xiaoliao.dev`）：仓库 Settings → Pages → Custom domain 填入，并在域名 DNS 加一条 CNAME 记录指向 `<用户名>.github.io`。
 
+## 引用量说明
+
+- **总引用量**（Publications 开头的 "200+ citations"）是 Google Scholar 的静态数字——GS 有反爬验证，静态网页无法实时获取；隔几个月手动更新一次即可（链接指向你的 GS 主页，访客可看实时数）。
+- **每篇论文的引用数**是页面加载时从 Semantic Scholar 公开 API 按 DOI 实时拉取的（自动更新，无需维护；略低于 GS 口径；抓取失败时自动隐藏）。实现见 `js/main.js` 末尾。
+
 ## 日常更新
 
 | 想改什么 | 改哪里 |
 |---|---|
 | 头像照片 | 放一张方形照片到 `assets/photo.jpg`（≥512×512），自动替换字母头像 |
 | News | `index.html` 中 `<ul class="news-list">`，最新在上 |
-| 论文 | `index.html` 中 `<!-- ============ Publications ============ -->` 一节，按年份分组复制一个 `<li class="pub">` 即可 |
+| 论文 | `index.html` 中 `<!-- ============ Publications ============ -->` 一节，按年份分组复制一个 `<li class="pub">` 即可（`data-s2-doi` 填 DOI 即可带出实时引用数） |
+| 总引用量 | `index.html` 中搜索 `200+ citations` |
 | 联系方式 | 页面中搜索 `xin-yuan.liao@connect.polyu.hk` |
 | 主题配色 | `css/style.css` 顶部的 CSS 变量（`--accent` 为主色，现为理大红） |
 
@@ -58,9 +64,9 @@ GitHub 仓库页 → "uploading an existing file" → 把本目录所有文件�
 
 ```
 personal-website/
-├── index.html          # 全部内容（About/News/Research/Publications/Education/Experience/Awards）
+├── index.html          # 全部内容（About/News/Experience/Publications）
 ├── css/style.css       # 样式（亮/暗双主题，响应式）
-├── js/main.js          # 主题切换、移动端菜单、滚动高亮、入场动画
+├── js/main.js          # 主题切换、移动端菜单、滚动高亮、实时引用数
 ├── assets/             # favicon.svg、avatar.svg（字母头像占位）、photo.jpg（放入后自动生效）
 ├── .nojekyll           # 跳过 GitHub Pages 的 Jekyll 处理
 └── README.md

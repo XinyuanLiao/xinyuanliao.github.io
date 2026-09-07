@@ -213,18 +213,6 @@ a:hover { text-decoration: underline; }
 
 .prose p { margin: 0 0 16px; max-width: 72ch; }
 
-/* Chips */
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
-.chip {
-  padding: 5px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 500;
-}
-
 /* ---------------- News ---------------- */
 .news-list { list-style: none; margin: 0; padding: 0; max-width: 72ch; }
 .news-list li {
@@ -242,29 +230,6 @@ a:hover { text-decoration: underline; }
   font-size: 14px;
   padding-top: 1px;
 }
-
-/* ---------------- Research cards ---------------- */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-.card {
-  padding: 22px 24px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform 0.18s ease, border-color 0.18s ease;
-}
-.card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
-.card h3 {
-  margin: 0 0 8px;
-  font-family: var(--serif);
-  font-size: 1.08rem;
-  font-weight: 600;
-}
-.card p { margin: 0; color: var(--muted); font-size: 14.8px; }
 
 /* ---------------- Publications ---------------- */
 .pub-note { margin: -12px 0 26px; color: var(--muted); font-size: 14.5px; }
@@ -305,7 +270,7 @@ a:hover { text-decoration: underline; }
 .pub-title:hover { color: var(--accent); }
 .pub-authors { color: var(--muted); font-size: 14.2px; }
 .pub-meta { color: var(--faint); font-size: 14.2px; }
-.pub-meta .cite { color: var(--accent); font-weight: 500; }
+.pub-cites { color: var(--accent); font-weight: 500; }
 .pub-links { font-size: 13.5px; }
 .pub-links a { font-weight: 600; }
 
@@ -346,27 +311,6 @@ a:hover { text-decoration: underline; }
 }
 .timeline-where { margin: 0 0 4px; color: var(--muted); font-size: 14.6px; }
 .timeline-body p { margin: 0; color: var(--muted); font-size: 14.6px; max-width: 70ch; }
-.timeline-note { color: var(--faint); font-size: 13.8px; }
-
-/* ---------------- Awards ---------------- */
-.awards-list { list-style: none; margin: 0; padding: 0; max-width: 72ch; }
-.awards-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 18px;
-  padding: 11px 14px;
-  margin-bottom: 8px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-}
-.award-year {
-  color: var(--accent);
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
 
 /* ---------------- Footer ---------------- */
 .footer {

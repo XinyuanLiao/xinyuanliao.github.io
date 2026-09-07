@@ -82,4 +82,46 @@
   /* ---- Footer year ---- */
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  /* ---- Live citation counts (Semantic Scholar public API) ----
+     Google Scholar blocks programmatic access, so per-paper counts are pulled
+     live from Semantic Scholar by DOI. One batch request; falls back to
+     sequential single requests (the API rate-limits bursts). Spans stay
+     empty on failure/offline. */
+  var citeEls = Array.prototype.slice.call(document.querySelectorAll("[data-s2-doi]"));
+
+  function setCite(el, data) {
+    if (data && typeof data.citationCount === "number") {
+      var n = data.citationCount;
+      el.textContent = n + (n === 1 ? " citation" : " citations");
+    }
+  }
+
+  function fetchSequential(list) {
+    if (!list.length) return;
+    var el = list.shift();
+    var doi = el.getAttribute("data-s2-doi");
+    fetch("https://api.semanticscholar.org/graph/v1/paper/DOI:" + encodeURIComponent(doi) + "?fields=citationCount")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) { setCite(el, j); })
+      .catch(function () { /* leave empty */ })
+      .then(function () {
+        setTimeout(function () { fetchSequential(list); }, 1200);
+      });
+  }
+
+  if (citeEls.length && window.fetch) {
+    fetch("https://api.semanticscholar.org/graph/v1/paper/batch?fields=citationCount", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ids: citeEls.map(function (e) { return "DOI:" + e.getAttribute("data-s2-doi"); }) })
+    })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error("batch failed")); })
+      .then(function (arr) {
+        citeEls.forEach(function (el, i) { setCite(el, arr && arr[i]); });
+      })
+      .catch(function () {
+        fetchSequential(citeEls.slice());
+      });
+  }
 })();
