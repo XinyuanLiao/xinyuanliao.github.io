@@ -37,8 +37,8 @@ GitHub 仓库页 → "uploading an existing file" → 把本目录所有文件�
 
 ## 引用量说明
 
-- **总引用量**（Publications 开头的 "200+ citations"）是 Google Scholar 的静态数字——GS 有反爬验证，静态网页无法实时获取；隔几个月手动更新一次即可（链接指向你的 GS 主页，访客可看实时数）。
-- **每篇论文的引用数**是页面加载时从 Semantic Scholar 公开 API 按 DOI 实时拉取的（自动更新，无需维护；略低于 GS 口径；抓取失败时自动隐藏）。实现见 `js/main.js` 末尾。
+- **总引用量与每篇论文的引用数**都在页面加载时从 Semantic Scholar 公开 API 按 DOI 实时拉取：总引用量 = 所显示的各篇引用数之和（部分极新论文 Semantic Scholar 未收录时不计入，对应条目不显示引用数）。自动更新，无需维护。
+- Google Scholar 有反爬验证，静态网页无法实时获取 GS 数字；页面保留 GS 主页链接供访客查看官方口径（GS 总数会高于 Semantic Scholar）。实现见 `js/main.js` 末尾。
 
 ## 日常更新
 
@@ -46,8 +46,7 @@ GitHub 仓库页 → "uploading an existing file" → 把本目录所有文件�
 |---|---|
 | 头像照片 | 放一张方形照片到 `assets/photo.jpg`（≥512×512），自动替换字母头像 |
 | News | `index.html` 中 `<ul class="news-list">`，最新在上 |
-| 论文 | `index.html` 中 `<!-- ============ Publications ============ -->` 一节，按年份分组复制一个 `<li class="pub">` 即可（`data-s2-doi` 填 DOI 即可带出实时引用数） |
-| 总引用量 | `index.html` 中搜索 `200+ citations` |
+| 论文 | `index.html` 中 `<!-- ============ Publications ============ -->` 一节，按年份分组复制一个 `<li class="pub">` 即可（`data-s2-doi` 填 DOI 即可带出实时引用数并计入总数） |
 | 联系方式 | 页面中搜索 `xin-yuan.liao@connect.polyu.hk` |
 | 主题配色 | `css/style.css` 顶部的 CSS 变量（`--accent` 为主色，现为理大红） |
 

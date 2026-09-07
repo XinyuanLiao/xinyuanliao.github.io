@@ -35,6 +35,12 @@ body {
 }
 
 [data-theme="dark"] {
+  --bg: #12151b;
+  --surface: #1a1e26;
+  --surface-2: #222733;
+  --text: #e8e6e1;
+  --muted: #a2aab6;
+  --faint: #98a1ae;
   --accent: #e2687d;
   --accent-strong: #ef8a9a;
   --accent-soft: rgba(226, 104, 125, 0.12);

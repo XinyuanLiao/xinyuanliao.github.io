@@ -85,16 +85,28 @@
 
   /* ---- Live citation counts (Semantic Scholar public API) ----
      Google Scholar blocks programmatic access, so per-paper counts are pulled
-     live from Semantic Scholar by DOI. One batch request; falls back to
-     sequential single requests (the API rate-limits bursts). Spans stay
-     empty on failure/offline. */
+     live from Semantic Scholar by DOI; the headline total is the sum of the
+     displayed counts. One batch request; falls back to sequential single
+     requests (the API rate-limits bursts). Spans stay empty on failure. */
   var citeEls = Array.prototype.slice.call(document.querySelectorAll("[data-s2-doi]"));
+  var totalNode = document.getElementById("total-cites");
+  var citeTotal = 0;
+  var citeSettled = 0;
+
+  function countSettled() {
+    citeSettled += 1;
+    if (totalNode && citeSettled === citeEls.length && citeSettled > 0) {
+      totalNode.textContent = citeTotal + (citeTotal === 1 ? " citation" : " citations") + " in total";
+    }
+  }
 
   function setCite(el, data) {
     if (data && typeof data.citationCount === "number") {
       var n = data.citationCount;
       el.textContent = n + (n === 1 ? " citation" : " citations");
+      citeTotal += n;
     }
+    countSettled();
   }
 
   function fetchSequential(list) {
@@ -104,7 +116,7 @@
     fetch("https://api.semanticscholar.org/graph/v1/paper/DOI:" + encodeURIComponent(doi) + "?fields=citationCount")
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) { setCite(el, j); })
-      .catch(function () { /* leave empty */ })
+      .catch(function () { countSettled(); })
       .then(function () {
         setTimeout(function () { fetchSequential(list); }, 1200);
       });
