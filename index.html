@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xinyuan Liao — Power Electronics &amp; Machine Learning</title>
+  <meta name="description" content="Xinyuan Liao (廖鑫源) — PhD candidate at The Hong Kong Polytechnic University. Foundation models, physics-informed machine learning, and thermal modeling for power electronics reliability.">
+  <meta property="og:title" content="Xinyuan Liao — Power Electronics &amp; Machine Learning">
+  <meta property="og:description" content="PhD candidate at The Hong Kong Polytechnic University. Foundation models, physics-informed ML, and thermal modeling for power electronics reliability.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav" id="top">
+    <nav class="nav-inner container">
+      <a class="nav-brand" href="#top">
+        <span class="nav-logo">XL</span>
+        <span class="nav-name">Xinyuan&nbsp;Liao</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ Hero ============ -->
+    <section class="hero container reveal">
+      <div class="hero-avatar">
+        <!-- TODO: put your photo at assets/photo.jpg (square, ≥ 512×512) and it will replace the monogram automatically -->
+        <img src="assets/photo.jpg" alt="Portrait of Xinyuan Liao"
+             onerror="this.onerror=null;this.src='assets/avatar.svg';">
+      </div>
+      <div class="hero-text">
+        <h1>Xinyuan Liao <span class="hero-name-cn">廖鑫源</span></h1>
+        <p class="hero-role">PhD Candidate in Electrical Power and Energy Systems</p>
+        <p class="hero-affil">Department of Electrical and Electronic Engineering<br>The Hong Kong Polytechnic University</p>
+        <p class="hero-line">Foundation models &amp; physics-informed machine learning for the reliability and thermal management of power electronics.</p>
+        <div class="hero-links">
+          <a class="hero-link" href="mailto:xin-yuan.liao@connect.polyu.hk" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email
+          </a>
+          <a class="hero-link" href="https://scholar.google.com/citations?user=IdfPU1UAAAAJ" target="_blank" rel="noopener" title="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769 1 20l10.377-.024zM8.6 13.3l4.42 7.014L20.5 12.2 9.5 20.6 8.6 13.3zM6.5 3 0 11.7l7.7 1.3L15 4.3 6.5 3zM23.9 5.6 16.6 4 9.9 12l7.4 1.3 6.6-7.7z" transform="scale(.92) translate(1 1)"/></svg>
+            Google&nbsp;Scholar
+          </a>
+          <!-- TODO: fill in your GitHub username, then remove the HTML comment markers around this link
+          <a class="hero-link" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.91c.58.1.79-.25.79-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.32-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12v3.14c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+            GitHub
+          </a>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section id="about" class="container section reveal">
+      <p class="section-kicker">About</p>
+      <h2 class="section-title">Short Bio</h2>
+      <div class="prose">
+        <p>
+          I am a PhD student in the <a href="https://www.polyu.edu.hk/eee/" target="_blank" rel="noopener">Department of Electrical and Electronic Engineering</a>
+          at The Hong Kong Polytechnic University. My research sits at the intersection of machine learning and
+          power electronics reliability: I build learning systems that stay trustworthy when the physics shifts —
+          across unseen operating conditions, multi-physics couplings, and time scales a thousand× apart.
+        </p>
+        <p>
+          My current work develops <strong>self-supervised time-series foundation models</strong> for power-converter health
+          monitoring that generalize to unseen conditions (<a href="#publications">PE-TSFM</a>, IEEE TIE), and load-robust
+          multi-physics attention models for joint electrical–thermal estimation (<a href="#publications">PE-ETT</a>, under review).
+          Earlier, I worked on physically interpretable, hardware-accelerable <strong>neural-dynamics thermal models</strong> for
+          PMSM drives (IEEE TVT / TEC) and <strong>physics-informed neural networks</strong> for remaining-useful-life prognostics
+          (Adv. Eng. Informatics). Experiments run on a 5&nbsp;kW three-phase traction-inverter platform with real-time RT-Box
+          control and 100&nbsp;kHz acquisition, accelerated power-cycling aging, and non-invasive electrical/thermal sensing.
+        </p>
+        <p>
+          Before PolyU, I received my M.Eng. in Information and Communication Engineering from Northwestern Polytechnical
+          University and my B.Eng. in Computer Science and Technology from Ocean University of China — a path from computing
+          into power electronics that still shapes how I approach reliability problems.
+        </p>
+        <div class="chips" aria-label="Tools and frameworks">
+          <span class="chip">PyTorch</span><span class="chip">JAX</span><span class="chip">TensorFlow</span>
+          <span class="chip">MATLAB / Simulink</span><span class="chip">PLECS</span><span class="chip">LTspice</span>
+          <span class="chip">TI RT-Box</span><span class="chip">Python / C++</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ News ============ -->
+    <section id="news" class="container section reveal">
+      <p class="section-kicker">News</p>
+      <h2 class="section-title">Recent Updates</h2>
+      <ul class="news-list">
+        <li><span class="news-date">2026</span><span><strong>PE-TSFM</strong> accepted by <em>IEEE Transactions on Industrial Electronics</em>.</span></li>
+        <li><span class="news-date">2026</span><span>Paper on domain foundation models for power electronics accepted at <em>IPEC 2026</em>.</span></li>
+        <li><span class="news-date">2026</span><span>Received the <strong>IEEE ECCE Student Travel Grant</strong>.</span></li>
+        <li><span class="news-date">2025</span><span>Joined <strong>The Hong Kong Polytechnic University</strong> as a PhD student with a full studentship.</span></li>
+        <li><span class="news-date">2025</span><span>Received the <strong>National Scholarship for Postgraduate Students</strong> (China) and an <strong>Outstanding Paper Award</strong> at the 2nd Electrical AI Conference.</span></li>
+        <li><span class="news-date">2024</span><span>Received the <strong>PCIM Europe Student Travel Grant</strong>; presented at PCIM Europe.</span></li>
+        <li><span class="news-date">2023</span><span>First first-author paper (PINN-RUL) published in <em>Advanced Engineering Informatics</em> — 160+ citations to date.</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ Research ============ -->
+    <section id="research" class="container section reveal">
+      <p class="section-kicker">Research</p>
+      <h2 class="section-title">Research Interests</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Foundation Models for Power Electronics</h3>
+          <p>Self-supervised time-series transformers pre-trained on converter telemetry, evaluated under leave-one-condition-out protocols for health monitoring that survives unseen loads, devices, and missions.</p>
+        </div>
+        <div class="card">
+          <h3>Physics-Informed Machine Learning</h3>
+          <p>Embedding heat-transfer and degradation dynamics into network structure — from self-attention-assisted PINNs for RUL prognostics to neural ODEs with physical interpretability.</p>
+        </div>
+        <div class="card">
+          <h3>Thermal Modeling of Drives &amp; Modules</h3>
+          <p>Lightweight neural-dynamics models for PMSM and IGBT-module temperature estimation, designed to be parallelizable and hardware-accelerable (FPGA-friendly) for embedded deployment.</p>
+        </div>
+        <div class="card">
+          <h3>Prognostics &amp; Health Management</h3>
+          <p>Non-invasive monitoring of bond-wire, solder-layer, DC-link capacitor, and TIM degradation; multi-timescale electrical (100&nbsp;kHz) × thermal (100&nbsp;Hz) fusion for reliability assessment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Publications ============ -->
+    <section id="publications" class="container section reveal">
+      <p class="section-kicker">Publications</p>
+      <h2 class="section-title">Selected Publications</h2>
+      <p class="pub-note">
+        ✦ denotes first author. Full list on
+        <a href="https://scholar.google.com/citations?user=IdfPU1UAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+      </p>
+
+      <h3 class="pub-year">2026</h3>
+      <ol class="pub-list">
+        <li class="pub" id="pub-tie">
+          <span class="pub-badge badge-journal">Journal · IEEE TIE</span>
+          <a class="pub-title" data-doi href="#" target="_blank" rel="noopener">PE-TSFM: Self-Supervised Time-Series Learning for Generalizable Power Converter Health Monitoring under Unseen Conditions</a>
+          <span class="pub-authors" data-authors>✦ X. Liao et al.</span>
+          <span class="pub-meta"><em>IEEE Transactions on Industrial Electronics</em>, 2026.</span>
+          <span class="pub-links"><a data-doi-link href="#">DOI</a> · <a href="https://scholar.google.com/scholar?q=PE-TSFM+Self-Supervised+Time-Series+Learning+Power+Converter+Health+Monitoring" target="_blank" rel="noopener">Scholar</a></span>
+        </li>
+        <li class="pub" id="pub-tec">
+          <span class="pub-badge badge-journal">Journal · IEEE TEC</span>
+          <a class="pub-title" data-doi href="#" target="_blank" rel="noopener">Parallelizable Complex Neural Dynamics Models for PMSM Temperature Estimation with Hardware Acceleration</a>
+          <span class="pub-authors" data-authors>✦ X. Liao et al.</span>
+          <span class="pub-meta"><em>IEEE Transactions on Energy Conversion</em>, 2026.</span>
+          <span class="pub-links"><a data-doi-link href="#">DOI</a> · <a href="https://scholar.google.com/scholar?q=Parallelizable+Complex+Neural+Dynamics+Models+PMSM+Temperature+Estimation+Hardware+Acceleration" target="_blank" rel="noopener">Scholar</a></span>
+        </li>
+        <!-- IPEC 2026 entry (filled from metadata lookup) -->
+        <li class="pub" id="pub-ipec">
+          <span class="pub-badge badge-conf">Conference · IPEC</span>
+          <a class="pub-title" data-doi href="https://scholar.google.com/citations?user=IdfPU1UAAAAJ" target="_blank" rel="noopener">Domain foundation models for power electronics (IPEC 2026)</a>
+          <span class="pub-authors" data-authors>✦ X. Liao et al.</span>
+          <span class="pub-meta"><em>International Power Electronics Conference (IPEC)</em>, 2026. <em>(exact title to be confirmed)</em></span>
+          <span class="pub-links"><a href="https://scholar.google.com/citations?user=IdfPU1UAAAAJ" target="_blank" rel="noopener">Scholar</a></span>
+        </li>
+      </ol>
+
+      <h3 class="pub-year">2025</h3>
+      <ol class="pub-list">
+        <li class="pub" id="pub-tvt">
+          <span class="pub-badge badge-journal">Journal · IEEE TVT</span>
+          <a class="pub-title" data-doi href="#" target="_blank" rel="noopener">Neural Dynamics Model for Temperature Estimation of Permanent Magnet Synchronous Motor</a>
+          <span class="pub-authors" data-authors>✦ X. Liao et al.</span>
+          <span class="pub-meta"><em>IEEE Transactions on Vehicular Technology</em>, 2025.</span>
+          <span class="pub-links"><a data-doi-link href="#">DOI</a> · <a href="https://scholar.google.com/scholar?q=Neural+Dynamics+Model+Temperature+Estimation+Permanent+Magnet+Synchronous+Motor" target="_blank" rel="noopener">Scholar</a></span>
+        </li>
+      </ol>
+
+      <h3 class="pub-year">2024</h3>
+      <ol class="pub-list">
+        <!-- ECCE 2024 entry (filled from metadata lookup) -->
+        <li class="pub" id="pub-ecce">
+          <span class="pub-badge badge-conf">Conference · IEEE ECCE</span>
+          <a class="pub-title" data-doi href="https://scholar.google.com/citations?user=IdfPU1UAAAAJ" target="_blank" rel="noopener">PE-GPT: a large-language-model assistant for power electronics (ECCE 2024)</a>
+          <span class="pub-authors" data-authors>✦ X. Liao et al.</span>
+          <span class="pub-meta"><em>IEEE Energy Conversion Congress and Exposition (ECCE)</em>, 2024. <em>(exact title to be confirmed)</em></span>
+          <span class="pub-links"><a href="https://scholar.google.com/citations?user=IdfPU1UAAAAJ" target="_blank" rel="noopener">Scholar</a></span>
+        </li>
+        <!-- PCIM Europe 2024 entry (filled from metadata lookup) -->
+        <li class="pub" id="pub-pcim">
+          <span class="pub-badge badge-conf">Conference · PCIM Europe</span>
+          <a class="pub-title" data-doi href="https://scholar.google.com/citations?user=IdfPU1UAAAAJ" target="_blank" rel="noopener">Neural-dynamics thermal modeling of PMSM (PCIM Europe 2024)</a>
+          <span class="pub-authors" data-authors>✦ X. Liao et al.</span>
+          <span class="pub-meta"><em>PCIM Europe International Exhibition and Conference for Power Electronics</em>, 2024. <em>(exact title to be confirmed)</em></span>
+          <span class="pub-links"><a href="https://scholar.google.com/citations?user=IdfPU1UAAAAJ" target="_blank" rel="noopener">Scholar</a></span>
+        </li>
+      </ol>
+
+      <h3 class="pub-year">2023</h3>
+      <ol class="pub-list">
+        <li class="pub" id="pub-aei">
+          <span class="pub-badge badge-journal">Journal · AEI</span>
+          <a class="pub-title" data-doi href="#" target="_blank" rel="noopener">Remaining Useful Life with Self-Attention assisted Physics-Informed Neural Network</a>
+          <span class="pub-authors" data-authors>✦ X. Liao et al.</span>
+          <span class="pub-meta"><em>Advanced Engineering Informatics</em>, vol. 55, 2023. <span class="cite">160+ citations</span></span>
+          <span class="pub-links"><a data-doi-link href="#">DOI</a> · <a href="https://scholar.google.com/scholar?q=Remaining+Useful+Life+Self-Attention+assisted+Physics-Informed+Neural+Network" target="_blank" rel="noopener">Scholar</a></span>
+        </li>
+      </ol>
+
+      <!-- TODO: uncomment once the paper is public, and fill in the exact title
+      <h3 class="pub-year">Under Review</h3>
+      <ol class="pub-list">
+        <li class="pub">
+          <span class="pub-badge badge-review">Under review · IEEE TPEL</span>
+          <a class="pub-title" href="#">PE-ETT: <exact title></a>
+          <span class="pub-authors">✦ X. Liao et al.</span>
+          <span class="pub-meta">Under review at <em>IEEE Transactions on Power Electronics</em>.</span>
+        </li>
+      </ol>
+      -->
+    </section>
+
+    <!-- ============ Education ============ -->
+    <section id="education" class="container section reveal">
+      <p class="section-kicker">Education</p>
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>Ph.D. in Electrical Power and Energy Systems <span class="timeline-when">2025 – 2028 (expected)</span></h3>
+            <p class="timeline-where">Department of Electrical and Electronic Engineering, The Hong Kong Polytechnic University, Hong Kong SAR</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>M.Eng. in Information and Communication Engineering <span class="timeline-when">2022 – 2025</span></h3>
+            <p class="timeline-where">School of Electronics and Information, Northwestern Polytechnical University, Xi'an, China</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>B.Eng. in Computer Science and Technology <span class="timeline-when">2018 – 2022</span></h3>
+            <p class="timeline-where">Faculty of Information Science and Engineering, Ocean University of China, Qingdao, China</p>
+            <p class="timeline-note">GPA 3.5/4.0 (top 15%); recommended admission to graduate school with exam exemption</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Experience ============ -->
+    <section id="experience" class="container section reveal">
+      <p class="section-kicker">Experience</p>
+      <h2 class="section-title">Industry Experience</h2>
+      <div class="timeline">
+        <!-- TODO: confirm official English company names -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>Research Assistant (Intern), R&amp;D Center <span class="timeline-when">Jul 2025 – Aug 2026</span></h3>
+            <p class="timeline-where">Three Gorges Smart Control Technology Co., Ltd. · Wuhan, China</p>
+            <p>AI-based short- and ultra-short-term output-power forecasting for wind farms.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>Research Assistant (Intern), Automotive Research Institute <span class="timeline-when">Mar 2023 – Oct 2023</span></h3>
+            <p class="timeline-where">Shaanxi Heavy Duty Automobile Co., Ltd. (SHACMAN) · Xi'an, China</p>
+            <p>High-efficiency thermal-management control algorithms for EV powertrain (three-electric) systems.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>Research Assistant (Intern) <span class="timeline-when">May 2022 – May 2023</span></h3>
+            <p class="timeline-where">An AVIC research institute · Luoyang, China</p>
+            <p>Machine-vision assembly guidance algorithms for optical components.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Awards ============ -->
+    <section id="awards" class="container section reveal">
+      <p class="section-kicker">Awards</p>
+      <h2 class="section-title">Honors &amp; Awards</h2>
+      <ul class="awards-list">
+        <li><span>IEEE ECCE Student Travel Grant</span><span class="award-year">2026</span></li>
+        <li><span>Outstanding Paper Award, 2nd Electrical Artificial Intelligence Conference (China)</span><span class="award-year">2025</span></li>
+        <li><span>PhD Studentship (full), The Hong Kong Polytechnic University</span><span class="award-year">2025</span></li>
+        <li><span>National Scholarship for Postgraduate Students, China</span><span class="award-year">2025</span></li>
+        <li><span>Outstanding Graduate Student</span><span class="award-year">2025</span></li>
+        <li><span>PCIM Europe Student Travel Grant</span><span class="award-year">2024</span></li>
+        <li><span>"Challenge Cup" Academic &amp; Technological Competition — Provincial First Prize</span><span class="award-year">2023</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Xinyuan Liao · <a href="mailto:xin-yuan.liao@connect.polyu.hk">xin-yuan.liao@connect.polyu.hk</a></p>
+      <p class="footer-note">The Hong Kong Polytechnic University · Last update: September 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

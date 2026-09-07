@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a41e34"/>
+      <stop offset="1" stop-color="#5d0f1d"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" fill="url(#bg)"/>
+  <circle cx="120" cy="96" r="0" fill="none"/>
+  <text x="120" y="142" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="84" font-weight="700" letter-spacing="2" fill="#ffffff">XL</text>
+  <text x="120" y="182" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-style="italic" fill="rgba(255,255,255,0.75)">est. MMXXV</text>
+</svg>
